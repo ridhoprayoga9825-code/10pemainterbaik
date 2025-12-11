@@ -1,0 +1,105 @@
+/* ===== Background utama ===== */
+.background {
+    position: fixed;              /* menempel di layar */
+    width: 100%;                  /* lebar penuh */
+    height: 100%;                 /* tinggi penuh */
+    background: linear-gradient(to right, #2e026d, #15162c); /* warna gradasi */
+    z-index: -1;                  /* berada di belakang elemen lain */
+}
+
+/* ===== Judul halaman ===== */
+.judul {
+    text-align: center;           /* teks di tengah */
+    color: white;                 /* warna putih */
+    margin-top: 35px;             /* jarak atas */
+    font-size: 32px;              /* ukuran tulisan */
+    font-weight: bold;            /* tebal */
+}
+
+/* ===== Grid daftar pemain ===== */
+.player-container {
+    max-width: 900px;             /* lebar maksimal area grid */
+    margin: 40px auto;            /* center + jarak atas bawah */
+    display: grid;                /* mengaktifkan grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* responsive */
+    gap: 25px;                    /* jarak antar card */
+}
+
+/* ===== Kartu pemain (glass effect) ===== */
+.player-card {
+    background: rgba(255,255,255,0.15); /* transparan */
+    padding: 25px 20px;                 /* ruang dalam */
+    border-radius: 18px;                /* sudut membulat */
+    text-align: center;                 /* isi rata tengah */
+    backdrop-filter: blur(10px);        /* efek blur */
+    cursor: pointer;                    /* jadi tangan saat hover */
+    transition: .3s;                    /* animasi */
+}
+
+.player-card:hover {
+    transform: scale(1.04);             /* membesar sedikit */
+    background: rgba(255,255,255,0.25); /* lebih terang */
+}
+
+/* ===== Foto pemain (bulat) ===== */
+.player-photo {
+    width: 160px;                       /* ukuran foto */
+    height: 160px;
+    border-radius: 50%;                 /* lingkaran */
+    object-fit: cover;                  /* gambar pas */
+    object-position: 50% 30%;           /* naik sedikit ke atas */
+    border: 4px solid rgba(255,255,255,0.3); /* border soft */
+    margin-bottom: 15px;                /* jarak bawah */
+}
+
+/* ===== Nama pemain ===== */
+.player-name {
+    color: white;                       /* warna teks */
+    font-size: 22px;                    /* ukuran tulisan */
+    font-weight: bold;                  /* tebal */
+}
+
+/* ===== Tombol kembali ===== */
+.back-btn {
+    margin: 25px;                       /* jarak */
+    padding: 8px 14px;                  /* dalam tombol */
+    background: rgba(255,255,255,0.15); /* glass */
+    color: white;                       /* warna text */
+    border: none;                       /* tanpa garis tepi */
+    border-radius: 10px;                /* sudut */
+    backdrop-filter: blur(6px);         /* efek blur */
+    font-size: 16px;                    /* ukuran */
+    cursor: pointer;                    /* mouse jadi tangan */
+    transition: .2s;                    /* animasi */
+}
+
+.back-btn:hover {
+    background: rgba(255,255,255,0.25); /* lebih terang saat hover */
+}
+
+/* ===== Wrapper halaman detail ===== */
+.detail-wrapper {
+    max-width: 600px;                   /* lebar maksimal */
+    margin: auto;                       /* ditengah */
+}
+
+/* ===== Card detail pemain ===== */
+.detail-card {
+    background: rgba(255,255,255,0.15); /* glass */
+    padding: 30px;                      /* ruang dalam */
+    border-radius: 20px;                /* sudut */
+    text-align: center;                 /* rata tengah */
+    backdrop-filter: blur(10px);        /* efek blur */
+    color: white;                       /* teks putih */
+}
+
+/* ===== Foto pemain di halaman detail ===== */
+.detail-photo {
+    width: 220px;                       /* ukuran besar */
+    height: 220px;
+    border-radius: 50%;                 /* lingkaran */
+    object-fit: cover;                  /* foto tidak gepeng */
+    object-position: 50% 30%;           /* wajah naik sedikit */
+    border: 5px solid rgba(255,255,255,0.3); /* border */
+    margin-bottom: 20px;                /* jarak bawah */
+}
